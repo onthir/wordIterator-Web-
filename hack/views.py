@@ -43,12 +43,12 @@ def home(request):
     else:
         return render(request, 'hack/index.html')
 
-def check_real(request):
-    del(results[:])
-    d = enchant.Dict("en_US")
-    for r in result:
-        if (enchant.Dict("en_US").check(r)) == True and len(r) != 1:
-            results.append(r)
-        else:
-            pass
-    return render(request, 'hack/index.html', {'results':results})
+# def check_real(request):
+#     del(results[:])
+#     d = enchant.Dict("en_US")
+#     for r in result:
+#         if (enchant.Dict("en_US").check(r)) == True and len(r) != 1:
+#             results.append(r)
+#         else:
+#             pass
+#     return render(request, 'hack/index.html', {'results':results})

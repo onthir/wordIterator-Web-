@@ -5,4 +5,4 @@ gunicorn==19.6.0
 Pillow==3.3.0
 psycopg2==2.7.0
 whitenoise==3.2
-PyEnchant
+pyenchant==1

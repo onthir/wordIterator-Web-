@@ -20,5 +20,5 @@ from hack import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
-    url(r'^check-real/$', views.check_real, name='check_real')
+    # url(r'^check-real/$', views.check_real, name='check_real')
 ]
