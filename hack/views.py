@@ -50,8 +50,9 @@ def check_real(request):
         # print(r)
         actual = Dictionary.objects.filter(word__iexact=str(r)).first()
         if actual:
+            print(actual.word)
             results.append(actual.word)
-            
+            print(actual.word)
         else:
-            actual = 'Not found'
+            pass
     return render(request, 'hack/index.html', {'results':results})

@@ -58,7 +58,7 @@
                     <div class="panel-body text-center">
                         {% for r in results %} {% if r|length == 5 %}
                         <p class="lead" style="font-size:40px">
-                            <strong>{{ r }}</strong>
+                            <strong>{{ r|lower }}</strong>
                         </p>
                         {% endif %} {% endfor %}
                     </div>
@@ -73,7 +73,7 @@
                     <div class="panel-body text-center">
                         {% for r in results %} {% if r|length == 4 %}
                         <p class="lead" style="font-size:40px">
-                            <strong>{{ r }}</strong>
+                            <strong>{{ r|lower }}</strong>
                         </p>
                         {% endif %} {% endfor %}
                     </div>
@@ -88,7 +88,7 @@
                         <div class="panel-body text-center">
                             {% for r in results %} {% if r|length == 3 %}
                             <p class="lead" style="font-size:40px">
-                                <strong>{{ r }}</strong>
+                                <strong>{{ r|lower }}</strong>
                             </p>
                             {% endif %} {% endfor %}
                         </div>
@@ -103,7 +103,7 @@
                             <div class="panel-body text-center">
                                 {% for r in results %} {% if r|length == 2 %}
                                 <p class="lead" style="font-size:40px">
-                                    <strong>{{ r }}</strong>
+                                    <strong>{{ r|lower }}</strong>
                                 </p>
                                 {% endif %} {% endfor %}
                             </div>
