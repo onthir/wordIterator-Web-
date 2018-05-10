@@ -11,7 +11,7 @@ with open("wordlist.txt") as file:
         c = d.replace(" ", "")
         e = str(c.lower())
         # add to the database
-        cur.execute("""insert into "dictionary" (word) VALUES (%s)""", (e,))
+        cur.execute("""insert into "hack_dictionary" (word) VALUES (%s)""", (e,))
         conn.commit()
         x += 1
 
