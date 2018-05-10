@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import math
 import itertools 
+from .models import Dictionary
 # Create your views here.
 
 words = []
@@ -42,12 +43,15 @@ def home(request):
     else:
         return render(request, 'hack/index.html')
 
-# def check_real(request):
-#     del(results[:])
-#     d = enchant.Dict("en_US")
-#     for r in result:
-#         if (enchant.Dict("en_US").check(r)) == True and len(r) != 1:
-#             results.append(r)
-#         else:
-#             pass
-#     return render(request, 'hack/index.html', {'results':results})
+def check_real(request):
+
+    del(results[:])
+    for r in result:
+        # print(r)
+        actual = Dictionary.objects.filter(word__iexact=str(r)).first()
+        if actual:
+            results.append(actual.word)
+            
+        else:
+            actual = 'Not found'
+    return render(request, 'hack/index.html', {'results':results})
